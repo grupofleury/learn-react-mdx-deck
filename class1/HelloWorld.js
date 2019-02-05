@@ -1,5 +1,5 @@
 function HelloWorld() {
-  return <p>Hello HelloWorld 🌍</p>;
+  return <p>Hello World 🌍</p>;
 }
 
 function App() {
