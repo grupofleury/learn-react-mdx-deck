@@ -1,6 +1,11 @@
 import { Head, Image } from 'mdx-deck'
 import { GFLogo, Center, Row, Container, Img } from './components'
 
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+import { LiveCode } from 'mdx-deck-live-code';
+import HelloWorld from './HelloWorld';
+
 export { default as theme } from './theme'
 
 <Head>
@@ -18,10 +23,6 @@ export { default as theme } from './theme'
 ---
 ## React
 #### A Javascript library for building user interfaces
-
-```notes
-- Create speaker notes in fenced code blocks
-```
 
 ---
 ### React worldwide 🌎
@@ -63,14 +64,46 @@ export { default as theme } from './theme'
 </Container>
 ---
 
-## Components
+## Componentes
+
+#### Pequenos pedaços de código que são:
+* Reutilizáveis
+* Isolados
+* Independentes
 
 ---
-
-### Live Code - Components e Classes
+<LiveCode
+  title="Quem sabe faz ao vivo"
+  size="large"
+  code={require("!raw-loader!./class-component.js")}
+  previewProps={{
+    style: {
+      background: '#2C3037'
+    }
+  }}
+/>
+---
+<CodeSurfer
+  title="mdx-deck"
+  code={require("!raw-loader!./HelloWorld.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Reutilizando componentes"},
+    { range: [1, 3], notes: "componente HelloWorld" },
+    { range: [4, 7], notes: "componente raiz" }
+  ]}
+/>
 
 ---
 ### JSX
+
+#### Syntax Extension to Javascript.
+`<h1> Hello World </h1>`
+
+---
+
 
 ---
 
@@ -83,4 +116,16 @@ export { default as theme } from './theme'
 --- 
 
 ---
-<https://github.com/jxnblk/mdx-deck>
+<CodeSurfer
+  title="mdx-deck"
+  code={require("!raw-loader!./example-mdx-deck.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Faça sua apresentação em React!"},
+    { lines: [1], notes: "imports" },
+    { lines: [7], notes: "título" },
+    { range: [10, 16], notes: "primeiro slide" },
+  ]}
+/>
