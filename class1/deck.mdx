@@ -1,0 +1,192 @@
+import { Head, Appear } from 'mdx-deck'
+import { GFLogo, Center, Row, Container, Img } from './components'
+
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+import { LiveCode } from 'mdx-deck-live-code';
+import HelloWorld from './HelloWorld';
+
+export { default as theme } from './theme'
+
+<Head>
+  <title>Class 1</title>
+</Head>
+
+<Container>
+  <Center>
+    <GFLogo src={'./img/gf-react2.png'} />
+  </Center>
+  <h2>Intensivão React</h2>
+  <p>Introdução</p>
+</Container>
+
+---
+## React
+#### A Javascript library for building user interfaces
+
+---
+
+1. Introdução: Componentes, JSX, Virtual DOM
+2. `state`
+3. `props`
+4. Customizando layout e debuggando com `DevTools`
+5. Métodos do ciclo de vida
+6. Testes com `Jest`
+7. Aula prática - Implementação de um case e discussão das abordagens
+
+---
+1. Utilizando GraphQL com `Apollo`
+2. `styled-components` e animações
+3. Formulários com `Formik`
+4. Criando sites estáticos com `Gatsby`
+5. `Context` API
+6. `React.lazy` e `Suspense`
+7. Hooks :fishing_pole_and_fish:
+8. Outra aula prática
+
+---
+### React worldwide 🌎
+
+<Container>
+  <Center>
+    <img src={'./img/google-trends-world-react.png'} />
+  </Center>
+</Container>
+---
+### React x Angular
+
+<Container>
+  <Center>
+    <img src={'./img/google-trends-world-react-angular.png'} />
+  </Center>
+</Container>
+---
+### React x Angular x jQuery
+
+<Container>
+  <Center>
+    <img src={'./img/google-trends-world-react-angular-jquery.png'} />
+  </Center>
+</Container>
+---
+### Open Source
+<Container>
+  <Center>
+    <img src={'./img/react-repo.png'} />
+  </Center>
+</Container>
+---
+# RFCs
+<Container>
+  <Center>
+    <img src={'./img/react-rfc.png'} />
+  </Center>
+</Container>
+---
+
+## Componentes
+
+#### Pequenos pedaços de código que são:
+* Reutilizáveis
+* Isolados
+* Independentes
+
+---
+
+## Componentes
+
+<Container>
+  <Center>
+    <img src={'./img/components.png'} />
+  </Center>
+</Container>
+---
+<LiveCode
+  title="Quem sabe faz ao vivo"
+  size="large"
+  code={require("!raw-loader!./class-component.js")}
+  previewProps={{
+    style: {
+      background: '#2C3037'
+    }
+  }}
+/>
+---
+<CodeSurfer
+  title="hello-world"
+  code={require("!raw-loader!./HelloWorld.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Reutilizando componentes"},
+    { range: [1, 3], notes: "componente HelloWorld" },
+    { range: [4, 7], notes: "componente raiz" }
+  ]}
+/>
+
+---
+### JSX
+
+#### Syntax Extension to Javascript.
+`<h1> Hello World </h1>`
+
+---
+<LiveCode
+  title="Live Code"
+  size="fullscreen"
+  code={require("!raw-loader!./jsx-example.js")}
+  previewProps={{
+    style: {
+      background: '#2C3037'
+    }
+  }}
+/>
+---
+### Virtual DOM
+<Container>
+  <Center>
+    <img src={'./img/vdom.png'} />
+  </Center>
+</Container>
+---
+### Como codar?
+* [create-react-app](https://github.com/facebook/create-react-app)
+* [stackblitz](https://stackblitz.com)
+---
+create-react-app
+<Container>
+  <Center>
+    <img src={'./img/cra.svg'} width="500" />
+  </Center>
+</Container>
+---
+create-react-app
+* Webpack e Babel
+* Typescript support 
+* Testes
+---
+stackblitz
+<Container>
+  <Center>
+    <img src={'./img/stackblitz.png'} />
+  </Center>
+</Container>
+---
+<CodeSurfer
+  title="mdx-deck"
+  code={require("!raw-loader!./example-mdx-deck.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Faça sua apresentação em React!"},
+    { lines: [1], notes: "imports" },
+    { lines: [7], notes: "título" },
+    { range: [11, 16], notes: "primeiro slide" },
+  ]}
+/>
+---
+* [mdx-deck](https://github.com/jxnblk/mdx-deck)
+* [code-surfer](https://github.com/pomber/code-surfer)
+* [live-code](https://github.com/pomber/code-surfer)
