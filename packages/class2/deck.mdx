@@ -1,0 +1,102 @@
+import { Head, Appear } from 'mdx-deck'
+import { GFLogo, Center, Row, Container, Img } from './components'
+
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+import { LiveCode } from 'mdx-deck-live-code';
+
+export { default as theme } from './theme'
+
+<Head>
+  <title>Class 1</title>
+</Head>
+
+<Container>
+  <Center>
+    <GFLogo src={'./img/gf-react2.png'} />
+  </Center>
+  <h2>Intensivão React</h2>
+  <p>state e props</p>
+</Container>
+
+---
+## React
+#### A Javascript library for building user interfaces
+
+---
+1. Introdução: Componentes, JSX, Virtual DOM
+2. `state` e `props`
+3. Customizando layout e debuggando com `DevTools`
+4. Métodos do ciclo de vida
+5. Testes com `Jest`
+6. **React Native**
+7. Aula prática - Implementação de um case e discussão das abordagens
+---
+# Issues
+<Container>
+  <Center>
+    <img src={'./img/issues.png'} />
+  </Center>
+</Container>
+---
+<LiveCode
+  title="state"
+  size="large"
+  code={require("!raw-loader!./class-component.js")}
+  previewProps={{
+    style: {
+      background: '#2C3037'
+    }
+  }}
+/>
+---
+<CodeSurfer
+  title="state"
+  code={require("!raw-loader!./state-examples.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "stated"},
+    { range: [1, 2], notes: "errado" },
+    { range: [4, 5], notes: "certo" }
+  ]}
+/>
+---
+<CodeSurfer
+  title="async!"
+  code={require("!raw-loader!./state-examples2.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Reutilizando componentes"},
+    { range: [1, 4], notes: "errado" },
+    { range: [6, 10], notes: "certo" }
+  ]}
+/>
+---
+<LiveCode
+  title="props"
+  size="large"
+  code={require("!raw-loader!./function-component.js")}
+  previewProps={{
+    style: {
+      background: '#2C3037'
+    }
+  }}
+/>
+---
+<CodeSurfer
+  title="props"
+  code={require("!raw-loader!./props-example.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Exemplo da utilização"},
+    { range: [1, 3], notes: "primeiro componente" },
+    { range: [5, 13], notes: "passando as props" }
+  ]}
+/>
+---
