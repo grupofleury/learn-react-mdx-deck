@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './img/gf-react2.png'
 import './App.css';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.tsx</code> and save to reload.
+            Intensivão de React!
           </p>
           <a
             className="App-link"
@@ -17,7 +17,19 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Docs Oficial
+          </a>
+
+          <h1>Conteúdo</h1>
+          <p>Aula 1</p>
+
+          <a
+            className="App-link"
+            href="https://github.com/grupofleury/learn-react-mdx-deck"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Docs Oficial
           </a>
         </header>
       </div>
