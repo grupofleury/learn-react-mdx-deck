@@ -3,9 +3,6 @@ import { GFLogo, Center, Row, Container, Img } from './components'
 
 import { CodeSurfer } from "mdx-deck-code-surfer"
 
-import { LiveCode } from 'mdx-deck-live-code';
-import HelloWorld from './HelloWorld';
-
 export { default as theme } from './theme'
 
 <Head>
@@ -101,15 +98,16 @@ export { default as theme } from './theme'
   </Center>
 </Container>
 ---
-<LiveCode
-  title="Quem sabe faz ao vivo"
-  size="large"
+<CodeSurfer
+  title="Class Components"
   code={require("!raw-loader!./class-component.js")}
-  previewProps={{
-    style: {
-      background: '#2C3037'
-    }
-  }}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { lines: [1], notes: "extends React.Component" },
+    { lines: [2], notes: "render() function" },
+  ]}
 />
 ---
 <CodeSurfer
@@ -124,7 +122,6 @@ export { default as theme } from './theme'
     { range: [4, 7], notes: "componente raiz" }
   ]}
 />
-
 ---
 ### JSX
 
@@ -132,15 +129,30 @@ export { default as theme } from './theme'
 `<h1> Hello World </h1>`
 
 ---
-<LiveCode
-  title="Live Code"
-  size="fullscreen"
+<CodeSurfer
+  title="JSX"
   code={require("!raw-loader!./jsx-example.js")}
-  previewProps={{
-    style: {
-      background: '#2C3037'
-    }
-  }}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Utilizando JSX no render()"},
+    { lines: [2], notes: "conditional" },
+    { range: [5, 10], notes: "if ternário dentro da tag html" }
+  ]}
+/>
+---
+<CodeSurfer
+  title="JSX 2"
+  code={require("!raw-loader!./jsx-example2.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Componentes dinâmico"},
+    { lines: [2], notes: "Array" },
+    { range: [5, 7], notes: "um paragraph para cada item do array" }
+  ]}
 />
 ---
 ### Virtual DOM
@@ -180,7 +192,7 @@ stackblitz
   showNumbers={false}
   dark={true}
   steps={[
-    { notes: "Faça sua apresentação em React!"},
+    { notes: "Faça sua apresentação em React! (React-ception)"},
     { lines: [1], notes: "imports" },
     { lines: [7], notes: "título" },
     { range: [11, 16], notes: "primeiro slide" },
