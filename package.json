@@ -1,6 +1,13 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "lerna": "lerna bootstrap --hoist",
+    "start:homepage": "lerna run start --scope homepage",
+    "build:mdx-deck": "lerna run build --scope class*",
+    "start": "yarn build:mdx-deck && yarn start:homepage",
+    "build": "lerna run build"
+  },
   "devDependencies": {
     "lerna": "^3.11.0"
   }

@@ -3,9 +3,6 @@ import { GFLogo, Center, Row, Container, Img } from './components'
 
 import { CodeSurfer } from "mdx-deck-code-surfer"
 
-import { LiveCode } from 'mdx-deck-live-code';
-import HelloWorld from './HelloWorld';
-
 export { default as theme } from './theme'
 
 <Head>
@@ -14,7 +11,7 @@ export { default as theme } from './theme'
 
 <Container>
   <Center>
-    <GFLogo src={'./img/gf-react2.png'} />
+    <GFLogo src={'./assets/gf-react2.png'} />
   </Center>
   <h2>Intensivão React</h2>
   <p>Introdução</p>
@@ -49,7 +46,7 @@ export { default as theme } from './theme'
 
 <Container>
   <Center>
-    <img src={'./img/google-trends-world-react.png'} />
+    <img src={'./assets/google-trends-world-react.png'} />
   </Center>
 </Container>
 ---
@@ -57,7 +54,7 @@ export { default as theme } from './theme'
 
 <Container>
   <Center>
-    <img src={'./img/google-trends-world-react-angular.png'} />
+    <img src={'./assets/google-trends-world-react-angular.png'} />
   </Center>
 </Container>
 ---
@@ -65,21 +62,21 @@ export { default as theme } from './theme'
 
 <Container>
   <Center>
-    <img src={'./img/google-trends-world-react-angular-jquery.png'} />
+    <img src={'./assets/google-trends-world-react-angular-jquery.png'} />
   </Center>
 </Container>
 ---
 ### Open Source
 <Container>
   <Center>
-    <img src={'./img/react-repo.png'} />
+    <img src={'./assets/react-repo.png'} />
   </Center>
 </Container>
 ---
 # RFCs
 <Container>
   <Center>
-    <img src={'./img/react-rfc.png'} />
+    <img src={'./assets/react-rfc.png'} />
   </Center>
 </Container>
 ---
@@ -97,19 +94,20 @@ export { default as theme } from './theme'
 
 <Container>
   <Center>
-    <img src={'./img/components.png'} />
+    <img src={'./assets/components.png'} />
   </Center>
 </Container>
 ---
-<LiveCode
-  title="Quem sabe faz ao vivo"
-  size="large"
+<CodeSurfer
+  title="Class Components"
   code={require("!raw-loader!./class-component.js")}
-  previewProps={{
-    style: {
-      background: '#2C3037'
-    }
-  }}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { lines: [1], notes: "extends React.Component" },
+    { lines: [2], notes: "render() function" },
+  ]}
 />
 ---
 <CodeSurfer
@@ -124,7 +122,6 @@ export { default as theme } from './theme'
     { range: [4, 7], notes: "componente raiz" }
   ]}
 />
-
 ---
 ### JSX
 
@@ -132,21 +129,36 @@ export { default as theme } from './theme'
 `<h1> Hello World </h1>`
 
 ---
-<LiveCode
-  title="Live Code"
-  size="fullscreen"
+<CodeSurfer
+  title="JSX"
   code={require("!raw-loader!./jsx-example.js")}
-  previewProps={{
-    style: {
-      background: '#2C3037'
-    }
-  }}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Utilizando JSX no render()"},
+    { lines: [2], notes: "conditional" },
+    { range: [5, 10], notes: "if ternário dentro da tag html" }
+  ]}
+/>
+---
+<CodeSurfer
+  title="JSX 2"
+  code={require("!raw-loader!./jsx-example2.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Componentes dinâmico"},
+    { lines: [2], notes: "Array" },
+    { range: [5, 7], notes: "um paragraph para cada item do array" }
+  ]}
 />
 ---
 ### Virtual DOM
 <Container>
   <Center>
-    <img src={'./img/vdom.png'} />
+    <img src={'./assets/vdom.png'} />
   </Center>
 </Container>
 ---
@@ -157,7 +169,7 @@ export { default as theme } from './theme'
 create-react-app
 <Container>
   <Center>
-    <img src={'./img/cra.svg'} width="500" />
+    <img src={'./assets/cra.svg'} width="500" />
   </Center>
 </Container>
 ---
@@ -169,7 +181,7 @@ create-react-app
 stackblitz
 <Container>
   <Center>
-    <img src={'./img/stackblitz.png'} />
+    <img src={'./assets/stackblitz.png'} />
   </Center>
 </Container>
 ---
@@ -180,7 +192,7 @@ stackblitz
   showNumbers={false}
   dark={true}
   steps={[
-    { notes: "Faça sua apresentação em React!"},
+    { notes: "Faça sua apresentação em React! (React-ception)"},
     { lines: [1], notes: "imports" },
     { lines: [7], notes: "título" },
     { range: [11, 16], notes: "primeiro slide" },

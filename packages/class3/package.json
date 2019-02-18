@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "Learn react with mdx-deck 1",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
+    "copy:start": "cp -r ../homepage/src/assets/ .",
+    "copy:build": "cp -r ../homepage/src/assets/ dist",
+    "start": "yarn copy:start && mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx && yarn copy:build",
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
     "help": "mdx-deck"
