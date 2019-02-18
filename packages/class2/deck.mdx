@@ -3,12 +3,10 @@ import { GFLogo, Center, Row, Container, Img } from './components'
 
 import { CodeSurfer } from "mdx-deck-code-surfer"
 
-import { LiveCode } from 'mdx-deck-live-code';
-
 export { default as theme } from './theme'
 
 <Head>
-  <title>Class 1</title>
+  <title>Class 2</title>
 </Head>
 
 <Container>
@@ -39,15 +37,17 @@ export { default as theme } from './theme'
   </Center>
 </Container>
 ---
-<LiveCode
-  title="state"
-  size="large"
+<CodeSurfer
+  title="Class Components"
   code={require("!raw-loader!./class-component.js")}
-  previewProps={{
-    style: {
-      background: '#2C3037'
-    }
-  }}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { lines: [1], notes: "extends React.Component" },
+    { range: [2, 7], notes: "class constructor" },
+    { lines: [9, 15], notes: "render() function" },
+  ]}
 />
 ---
 <CodeSurfer
@@ -57,7 +57,7 @@ export { default as theme } from './theme'
   showNumbers={false}
   dark={true}
   steps={[
-    { notes: "stated"},
+    { notes: "Como alterar o state?"},
     { range: [1, 2], notes: "errado" },
     { range: [4, 5], notes: "certo" }
   ]}
@@ -70,21 +70,22 @@ export { default as theme } from './theme'
   showNumbers={false}
   dark={true}
   steps={[
-    { notes: "Reutilizando componentes"},
-    { range: [1, 4], notes: "errado" },
-    { range: [6, 10], notes: "certo" }
+    { notes: "Cuidado na hora de alterar o state"},
+    { range: [1, 4], notes: "this.state.counter pode mudar no tempo de exec" },
+    { range: [6, 10], notes: "usando uma função no setState, podemos pegar o state atual sem medo" }
   ]}
 />
 ---
-<LiveCode
-  title="props"
-  size="large"
+<CodeSurfer
+  title="Functional Components"
   code={require("!raw-loader!./function-component.js")}
-  previewProps={{
-    style: {
-      background: '#2C3037'
-    }
-  }}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { lines: [1], notes: "mais clean na hora de criar" },
+    { lines: [2], notes: "o return já é o próprio render()" },
+  ]}
 />
 ---
 <CodeSurfer
@@ -99,4 +100,3 @@ export { default as theme } from './theme'
     { range: [5, 13], notes: "passando as props" }
   ]}
 />
----
