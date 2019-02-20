@@ -3,23 +3,27 @@
   "version": "0.0.1",
   "description": "Learn react with mdx-deck 1",
   "scripts": {
-    "copy:start": "cp -r ../homepage/src/assets/ .",
-    "copy:build": "cp -r ../homepage/src/assets/ dist",
-    "start": "yarn copy:start && mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx && yarn copy:build",
-    "pdf": "mdx-deck pdf deck.mdx",
-    "image": "mdx-deck screenshot deck.mdx",
+    "copy:start": "cp -r ../homepage/public/assets/ .",
+    "start": "yarn copy:start && mdx-deck src/deck.mdx",
+    "build": "cross-var mdx-deck build src/deck.mdx --out-dir ../homepage/public/$npm_package_name",
+    "pdf": "mdx-deck pdf src/deck.mdx",
+    "image": "mdx-deck screenshot src/deck.mdx",
     "help": "mdx-deck"
   },
   "keywords": [],
   "author": "Luiz Cieslak",
   "license": "MIT",
   "devDependencies": {
+    "file-loader": "^3.0.1",
     "mdx-code": "^1.1.3",
     "mdx-deck": "^1.7.7",
     "mdx-deck-code-surfer": "^0.5.5",
     "mdx-deck-live-code": "^1.0.0",
-    "raw-loader": "^1.0.0"
+    "raw-loader": "^1.0.0",
+    "react-router-dom": "^4.3.1"
   },
-  "name": "class2"
+  "name": "class2",
+  "dependencies": {
+    "cross-var": "^1.1.0"
+  }
 }

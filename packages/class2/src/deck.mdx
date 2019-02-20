@@ -11,7 +11,7 @@ export { default as theme } from './theme'
 
 <Container>
   <Center>
-    <GFLogo src={'./assets/gf-react2.png'} />
+    <GFLogo src={require('file-loader!../assets/gf-react2.png')} />
   </Center>
   <h2>Intensivão React</h2>
   <p>state e props</p>
@@ -33,7 +33,7 @@ export { default as theme } from './theme'
 # Issues
 <Container>
   <Center>
-    <img src={'./assets/issues.png'} />
+    <img src={require('file-loader!../assets/issues.png')} />
   </Center>
 </Container>
 ---
