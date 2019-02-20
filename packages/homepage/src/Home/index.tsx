@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from '%PUBLIC_URL%/assets/gf-react2.png'
-import './index.css';
 import styled, { keyframes } from 'styled-components';
 import Navbar from '../Navbar'
 
@@ -49,18 +47,21 @@ export default function Home() {
           { /*<Typography variant="title" color="inherit">
                     Intensivão React Grupo Fleury
             </Typography> */}
-          <StyledA href="https://github.com/grupofleury/learn-react-mdx-deck">
+
+          <h1>Intensivão React Grupo Fleury ⚛</h1>
+          <h2>Conteúdo 📔</h2>
+          <ul>
+            <li><a href="/dist/class3/index.html">Aula 1</a></li>
+            <li><a href="/dist/class3/index.html">Aula 2</a></li>
+            <li><a href="/dist/class3/index.html">Aula 3</a></li>
+          </ul>
+
+          <StyledA href="https://reactjs.org/docs/">
             Docs Oficial
           </StyledA>
-
-          <StyledA href="/dist/class3/index.html">
-            Aula 3
-          </StyledA>
-
-          <h1>Conteúdo</h1>
           
           <StyledA href="https://github.com/grupofleury/learn-react-mdx-deck">
-            Docs Oficial
+            GitHub
           </StyledA>
         </Header>
       </Container>
