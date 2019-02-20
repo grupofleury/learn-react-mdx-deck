@@ -5,10 +5,10 @@
   "scripts": {
     "copy:start": "cp -r ../homepage/src/assets/ .",
     "copy:build": "cp -r ../homepage/src/assets/ dist",
-    "start": "yarn copy:start && mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx && yarn copy:build",
-    "pdf": "mdx-deck pdf deck.mdx",
-    "image": "mdx-deck screenshot deck.mdx",
+    "start": "yarn copy:start && mdx-deck src/deck.mdx",
+    "build": "mdx-deck build src/deck.mdx && yarn copy:build",
+    "pdf": "mdx-deck pdf src/deck.mdx",
+    "image": "mdx-deck screenshot src/deck.mdx",
     "help": "mdx-deck"
   },
   "keywords": [],
