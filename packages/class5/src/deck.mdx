@@ -1,0 +1,70 @@
+import { Head, Appear } from 'mdx-deck'
+import { GFLogo, Center, Row, Container, Img } from './components'
+
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+export { default as theme } from './theme'
+
+<Head>
+  <title>Class 3</title>
+</Head>
+
+<Container>
+  <Center>
+    <GFLogo src={require('file-loader!../assets/gf-react2.png')} />
+  </Center>
+  <h2>Intensivão React</h2>
+  <p>Buscando dados em uma API GraphQL</p>
+</Container>
+
+---
+<Container>
+  <Center>
+    <GFLogo src={require('file-loader!../assets/graphql.png')} />
+  </Center>
+  <h2>GraphQL</h2>
+  <p>Linguagem de query para APIs</p>
+</Container>
+---
+* Não depende do BD
+* É definido um schema, tipos de dados 
+* Queries e Mutations
+---
+[Meetup GraphQL e Hooks](https://www.facebook.com/reactconf/videos/575171139570703/?__xts__[0]=68.ARAYNJz_1awx_GnoGyEMYTJF067BJ78Afzt8x6zN3xYA6csI2l13P5NyllYr3Wz0E1gd6IcJUIMQL13GcfxzWLcY_p1vTN1WrngGGyEA2EHSCacu3eJ3z6nc_jUd7PqNzXivL0SZS7Q0P-JpE7_z7uLPItioYXOT34bcFVIuP8RF_aC_wNJ7CNfJzaKVZ8Wm25UEtuXH-P_t95zoU1Hvz927AtC-mhiSop9tmDTMvDoN9DcW6oLgVEHpghEPB1_Imf0XyWBWeUHyMnY4qnar0Fx4OXqRQk_Iw0a24XSK70sqHu-OzquUsPfGUHF-WbSGqPCPK_9vMuTllZbqraIXmffjxkMHEHHe&__tn__=-R)
+---
+Graph**i**QL
+---
+<CodeSurfer
+  title="Query"
+  code={require("!raw-loader!./grapgql-var.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Como usar var?"},
+    { lines: [2], notes: "Declarando na Query" },
+    { lines: [2], notes: "Utilizando" },
+  ]}
+/>
+---
+<CodeSurfer
+  title="Apollo"
+  code={require("!raw-loader!./apollo.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Como utilizar"},
+    { range: [1, 4], notes: "Imports" },
+    { range: [6, 8], notes: "Conexão" },
+    { range: [11, 19], notes: "Query" },
+    { range: [21, 32], notes: "Component" },
+  ]}
+/>
+---
+DOJO
+<Container>
+  <Center>
+    <img src={require('file-loader!../assets/dojo.jpg')} />
+  </Center>
+</Container>
