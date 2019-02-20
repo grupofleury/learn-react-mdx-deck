@@ -1,0 +1,71 @@
+import { Head, Appear } from 'mdx-deck'
+import { GFLogo, Center, Row, Container, Img } from './components'
+
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+export { default as theme } from './theme'
+
+<Head>
+  <title>Class 4</title>
+</Head>
+
+<Container>
+  <Center>
+    <GFLogo src={require('file-loader!../assets/gf-react2.png')} />
+  </Center>
+  <h2>Intensivão React</h2>
+  <p>Context</p>
+</Container>
+---
+## Context
+#### O que é e como utilizar
+---
+<CodeSurfer
+  title="Passar props..."
+  code={require("!raw-loader!./context-motivation.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "...pode ser complexo"},
+    { lines: [3], notes: "nivel 1" },
+    { lines: [10], notes: "nivel 7" }
+  ]}
+/>
+---
+### Context
+#### Quando algum dado precisa ser "global" ou acessado por múltiplos componentes.
+---
+<CodeSurfer
+  title="Context"
+  code={require("!raw-loader!./context-theme.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Sintaxe"},
+    { lines: [1], notes: "Criando o contexto" },
+    { range: [3, 11], notes: "Provedor do contexto" },
+    { range: [13, 19], notes: "Navbar não passa props!" },
+    { range: [21, 26], notes: "Classe que consome o contexto" },
+    { range: [28, 34], notes: "Função que consome o contexto" },
+  ]}
+/>
+---
+<CodeSurfer
+  title="Múltiplos Contexts"
+  code={require("!raw-loader!./context-multiple.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "É preciso encadear contextos"},
+    { range: [1, 5], notes: "2 contextos" },
+    { range: [7, 19], notes: "Providers" },
+    { range: [21, 28], notes: "Não precisa passar props" },
+    { range: [30, 42], notes: "Consumidores encadeados" },
+  ]}
+/>
+---
+### Use com moderação!
+#### Existem outras maneiras de resolver o problema, por ex, passando o componente inteiro ou redux
