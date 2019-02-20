@@ -51,9 +51,9 @@ export default function Home() {
           <h1>Intensivão React Grupo Fleury ⚛</h1>
           <h2>Conteúdo 📔</h2>
           <ul>
-            <li><a href="/dist/class3/index.html">Aula 1</a></li>
-            <li><a href="/dist/class3/index.html">Aula 2</a></li>
-            <li><a href="/dist/class3/index.html">Aula 3</a></li>
+            <li><a href="/class1/index.html">Aula 1</a></li>
+            <li><a href="/class2/index.html">Aula 2</a></li>
+            <li><a href="/class3/index.html">Aula 3</a></li>
           </ul>
 
           <StyledA href="https://reactjs.org/docs/">

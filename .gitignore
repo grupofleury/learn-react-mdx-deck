@@ -4,5 +4,3 @@ dist
 
 *.log
 packages/*/package-lock\.json
-
-packages/homepage/public/class*
