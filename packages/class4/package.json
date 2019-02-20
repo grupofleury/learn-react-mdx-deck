@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "version": "0.0.1",
+  "description": "Learn react with mdx-deck",
+  "scripts": {
+    "copy:start": "cp -r ../homepage/src/assets/ .",
+    "copy:build": "cp -r ../homepage/src/assets/ dist",
+    "start": "yarn copy:start && mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx && yarn copy:build",
+    "pdf": "mdx-deck pdf deck.mdx",
+    "image": "mdx-deck screenshot deck.mdx",
+    "help": "mdx-deck"
+  },
+  "keywords": [],
+  "author": "Luiz Cieslak",
+  "license": "MIT",
+  "devDependencies": {
+    "mdx-code": "^1.1.3",
+    "mdx-deck": "^1.7.7",
+    "mdx-deck-code-surfer": "^0.5.5",
+    "mdx-deck-live-code": "^1.0.0",
+    "raw-loader": "^1.0.0"
+  },
+  "name": "class4"
+}
