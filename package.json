@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "lerna": "lerna bootstrap --hoist",
+    "start:homepage": "lerna run start --scope homepage",
+    "build:mdx-deck": "lerna run build --scope class*",
+    "start": "yarn build:mdx-deck && yarn start:homepage",
+    "build": "lerna run build",
+    "build:netlify": "yarn lerna && yarn build"
+  },
+  "devDependencies": {
+    "lerna": "^3.11.0"
+  },
+  "dependencies": {
+    "@types/styled-components": "^4.1.10",
+    "styled-components": "^4.1.3"
+  }
+}

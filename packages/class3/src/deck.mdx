@@ -1,0 +1,116 @@
+import { Head, Appear } from 'mdx-deck'
+import { GFLogo, Center, Row, Container, Img } from './components'
+
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+export { default as theme } from './theme'
+
+<Head>
+  <title>Class 3</title>
+</Head>
+
+<Container>
+  <Center>
+    <GFLogo src={require('file-loader!../assets/gf-react2.png')} />
+  </Center>
+  <h2>Intensivão React</h2>
+  <p>Layout, Ciclo de Vida e DOJO!</p>
+</Container>
+
+---
+## React
+#### A Javascript library for building user interfaces
+
+---
+## Layout
+#### Como definir?
+---
+<CodeSurfer
+  title="Importando CSS"
+  code={require("!raw-loader!./stylesheet.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Exemplo 1"},
+    { range: [1, 2], notes: "imports" },
+    { range: [4, 6], notes: "componente" }
+  ]}
+/>
+---
+### ou
+#### Bootstrap, outras bibs e `styled-components`
+---
+<CodeSurfer
+  title="styled-components"
+  code={require("!raw-loader!./styled-components.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Exemplo 2"},
+    { range: [1, 5], notes: "componente 1" },
+    { range: [7, 10], notes: "componente 2" }
+  ]}
+/>
+---
+<CodeSurfer
+  title="React Native"
+  code={require("!raw-loader!./react-native.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Como é no React Native? 🤔"},
+    { lines: [2], notes: "imports" },
+    { range: [4, 16], notes: "StyleSheet" },
+    { range: [18, 26], notes: "Componente" },
+  ]}
+/>
+---
+<CodeSurfer
+  title="Ciclo de vida"
+  code={require("!raw-loader!./lifecycle-basic.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Exemplo"},
+    { range: [2, 4], notes: "will mount" },
+    { range: [6, 12], notes: "render" }
+  ]}
+/>
+---
+<CodeSurfer
+  title="Ciclo de vida"
+  code={require("!raw-loader!./lifecycle-complete.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Outras funções"},
+    { range: [1, 6], notes: "antes do render()" },
+    { range: [8, 15], notes: "atualização" },
+    { range: [17, 18], notes: "na desmontagem" }
+  ]}
+/>
+---
+<CodeSurfer
+  title="fetch"
+  code={require("!raw-loader!./fetch.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "fetch na vem no pacote"},
+    { range: [1, 11], notes: "returns a Promise" },
+    { range: [12, 18], notes: "Promise handling" }
+  ]}
+/>
+---
+DOJO
+<Container>
+  <Center>
+    <img src={require('file-loader!../assets/dojo.jpg')} />
+  </Center>
+</Container>

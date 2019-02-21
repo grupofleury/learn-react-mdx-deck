@@ -1,0 +1,15 @@
+{
+	"defaultSeverity": "error",
+	"extends": [
+		"tslint:latest",
+		"tslint-config-prettier"
+	],
+	"jsRules": {},
+	"rules": {
+    "object-literal-sort-keys": false
+  },
+	"rulesDirectory": [],
+	"linterOptions": {
+		"exclude": ["**/node_modules/**"]
+	}
+}

@@ -1,0 +1,102 @@
+import { Head, Appear } from 'mdx-deck'
+import { GFLogo, Center, Row, Container, Img } from './components'
+
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+export { default as theme } from './theme'
+
+<Head>
+  <title>Class 2</title>
+</Head>
+
+<Container>
+  <Center>
+    <GFLogo src={require('file-loader!../assets/gf-react2.png')} />
+  </Center>
+  <h2>Intensivão React</h2>
+  <p>state e props</p>
+</Container>
+
+---
+## React
+#### A Javascript library for building user interfaces
+
+---
+1. Introdução: Componentes, JSX, Virtual DOM
+2. `state` e `props`
+3. Customizando layout e debuggando com `DevTools`
+4. Métodos do ciclo de vida
+5. Testes com `Jest`
+6. **React Native**
+7. Aula prática - Implementação de um case e discussão das abordagens
+---
+# Issues
+<Container>
+  <Center>
+    <img src={require('file-loader!../assets/issues.PNG')} />
+  </Center>
+</Container>
+---
+<CodeSurfer
+  title="Class Components"
+  code={require("!raw-loader!./class-component.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { lines: [1], notes: "extends React.Component" },
+    { range: [2, 7], notes: "class constructor" },
+    { lines: [9, 15], notes: "render() function" },
+  ]}
+/>
+---
+<CodeSurfer
+  title="state"
+  code={require("!raw-loader!./state-examples.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Como alterar o state?"},
+    { range: [1, 2], notes: "errado" },
+    { range: [4, 5], notes: "certo" }
+  ]}
+/>
+---
+<CodeSurfer
+  title="async!"
+  code={require("!raw-loader!./state-examples2.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Cuidado na hora de alterar o state"},
+    { range: [1, 4], notes: "this.state.counter pode mudar no tempo de exec" },
+    { range: [6, 10], notes: "usando uma função no setState, podemos pegar o state atual sem medo" }
+  ]}
+/>
+---
+<CodeSurfer
+  title="Functional Components"
+  code={require("!raw-loader!./function-component.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { lines: [1], notes: "mais clean na hora de criar" },
+    { lines: [2], notes: "o return já é o próprio render()" },
+  ]}
+/>
+---
+<CodeSurfer
+  title="props"
+  code={require("!raw-loader!./props-example.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={true}
+  steps={[
+    { notes: "Exemplo da utilização"},
+    { range: [1, 3], notes: "primeiro componente" },
+    { range: [5, 13], notes: "passando as props" }
+  ]}
+/>
