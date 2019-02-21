@@ -6,7 +6,8 @@
     "start:homepage": "lerna run start --scope homepage",
     "build:mdx-deck": "lerna run build --scope class*",
     "start": "yarn build:mdx-deck && yarn start:homepage",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "build:netlify": "yarn lerna && yarn build"
   },
   "devDependencies": {
     "lerna": "^3.11.0"
