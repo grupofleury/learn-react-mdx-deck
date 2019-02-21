@@ -9,11 +9,9 @@
     "build": "lerna run build"
   },
   "devDependencies": {
-    "lerna": "^3.11.0",
-    "react-scripts": "2.1.5"
+    "lerna": "^3.11.0"
   },
   "dependencies": {
-    "@material-ui/styles": "^3.0.0-alpha.10",
     "@types/styled-components": "^4.1.10",
     "styled-components": "^4.1.3"
   }

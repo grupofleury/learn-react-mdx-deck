@@ -22,7 +22,10 @@
     "ts-jest": "^23.10.5",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
-    "typescript": "3.3.3"
+    "typescript": "3.3.3",
+    "react-scripts": "2.1.5",
+    "@material-ui/styles": "^3.0.0-alpha.10",
+    "react-router-dom": "^4.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -56,9 +59,5 @@
       "<rootDir>/node_modules/"
     ],
     "cacheDirectory": ".jest/cache"
-  },
-  "devDependencies": {
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5"
   }
 }
