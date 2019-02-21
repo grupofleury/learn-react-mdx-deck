@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "Learn react with mdx-deck 1",
   "scripts": {
-    "copy:start": "cp -r ../homepage/public/assets/ .",
-    "start": "yarn copy:start && mdx-deck src/deck.mdx",
-    "build": "cross-var mdx-deck build src/deck.mdx --out-dir ../homepage/public/$npm_package_name",
+    "copy:images": "cp -r ../homepage/public/assets/ .",
+    "start": "yarn copy:images && mdx-deck src/deck.mdx",
+    "build": "yarn copy:images && cross-var mdx-deck build src/deck.mdx --out-dir ../homepage/public/$npm_package_name",
     "pdf": "mdx-deck pdf src/deck.mdx",
     "image": "mdx-deck screenshot src/deck.mdx",
     "help": "mdx-deck"
