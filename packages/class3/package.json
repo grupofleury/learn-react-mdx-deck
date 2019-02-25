@@ -5,7 +5,7 @@
   "scripts": {
     "copy:images": "cp -r ../homepage/public/assets/ .",
     "start": "yarn copy:images && mdx-deck src/deck.mdx",
-    "build": "yarn copy:images && cross-var mdx-deck build src/deck.mdx --out-dir ../homepage/public/$npm_package_name",
+    "build": "yarn copy:images && cross-var mdx-deck build src/deck.mdx --out-dir ../homepage/build/$npm_package_name",
     "pdf": "mdx-deck pdf src/deck.mdx",
     "image": "mdx-deck screenshot src/deck.mdx",
     "help": "mdx-deck"
