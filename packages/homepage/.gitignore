@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Arquivos estáticos (menos os assets)
+/public/class*

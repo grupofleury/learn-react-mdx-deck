@@ -54,7 +54,7 @@ export default function Home() {
             <li><a href="/class1/index.html">Aula 1</a></li>
             <li><a href="/class2/index.html">Aula 2</a></li>
             <li><a href="/class3/index.html">Aula 3</a></li>
-            <li><a href="/class5/index.html">Aula 4</a></li>
+            <li><a href="/class4/index.html">Aula 4</a></li>
             <li><a href="/class5/index.html">Aula 5</a></li>
             {/* Será que tem um jeito automático de trazer esses links? */}
           </ul>
